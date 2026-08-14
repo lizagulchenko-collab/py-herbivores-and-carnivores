@@ -29,5 +29,4 @@ class Carnivore(Animal):
     def bite(self, herbivore: Herbivore) -> None:
         if isinstance(herbivore, Herbivore) and not herbivore.hidden:
             herbivore.health = max(0, herbivore.health - 50)
-
-        Animal.alive = [a for a in Animal.alive if a.health > 0]
+            Animal.alive = [a for a in Animal.alive if a.health > 0]
